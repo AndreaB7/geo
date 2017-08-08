@@ -22,13 +22,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
-
-  <!-- Scripts P5.JS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="libs/p5.dom.min.js"></script>
-  <script src="libs/p5.min.js"></script>
-  <script src="libs/p5.sound.min.js"></script>
-  <script src="sketch.js"></script>
+  <link rel="stylesheet" href="css/game.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,26 +33,32 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <div class="home-button">
-    <a class="button" id="circlehome" href="index.html"></a>
-    <h6>HOME</h6>
+  <div class="home-button">
+  <a class="button" id="circlehome" href="index.html">
+    <audio id="mySoundClip">
+      <source src="soundbible/sonar.mp3"></source>
+    </audio>
+  </a>
+  <h6>HOME</h6>
   </div>
 
   <div class="section buttons">
     <div class="container">
 
       <div class="row">
-      <p> Here will come the Game</p>
+      <p> Tetractys out of code</p>
+      <div id="game" class="container animated fadeIn"> </div>
       </div>
     </div>
   </div>
 
 
-<!-- Scripts JS
+<!-- Scripts JS JQUERY
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="game.js"></script> -->
-<script type="text/javascript" src="js/game.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/game.js"></script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

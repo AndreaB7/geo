@@ -1,0 +1,61 @@
+/* ============== BODY ================== */
+
+.main {
+}
+
+
+/* ============== TRIANGLE ================== */
+
+#triangle-up {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid white;
+
+  /*border-left: 50px dotted blue;*/
+  /*box-shadow: 10px 10px 5px #888888;*/
+
+}
+
+
+/* ============== CELLS ================== */
+.cell {
+  width: 30%;
+  height: 100px;
+  border: 1px solid #F2F3F4;
+  background-color: #FDFEFE;
+  opacity; 0.8;
+
+  float: left;
+  margin-right: 1px;
+  margin-right: 1px;
+
+  /*cursor: url("images/cursor.png"), auto;*/
+  cursor: pointer;
+
+}
+
+.cell:hover {
+  background-color: #99FFCC;
+
+}
+
+.cellX {
+
+  font-size: 36px;
+  font-family: futura;
+  /*font-variant: small-caps;*/
+  color: #FDFEFE;
+
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 0 5px grey;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5px;
+  margin-right: 5px;
+}
