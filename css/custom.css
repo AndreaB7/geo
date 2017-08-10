@@ -2,7 +2,6 @@
 
 body {
   background-color: #E1E1E1;
-  transition: all 2000ms ease;
 }
 
 .citation{
@@ -10,6 +9,36 @@ body {
   letter-spacing: 20px;
 }
 
+.italic{
+  font-style: italic;
+}
+
+
+#block1 {
+  -webkit-transition-delay: 8000ms; /* Safari */
+  transition-delay: 8000ms;
+
+  opacity: 0;
+  transition: opacity 5000ms ease;*/
+}
+
+#block1.fade-in,
+#animation2.fade-in {
+  opacity: 1;
+}
+
+#block2 {
+  -webkit-transition-delay: 8000ms; /* Safari */
+  transition-delay: 8000ms;
+
+  opacity: 0;
+  transition: opacity 7000ms ease;
+}
+
+#block2.fade-in,
+#animation2.fade-in {
+  opacity: 1;
+}
 
 /* ============== ANIMATION P5 POSITION================== */
 #animation{
@@ -41,7 +70,20 @@ body {
   transition: opacity 5000ms ease;
 }
 
-#animation2.fade-in {
+#animation3{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* the animation is in an inferior layer Vs the game(upper) */
+  z-index: -1;
+  /* para que sea transparente al inicio --> animación */
+  opacity: 0;
+  transition: opacity 5000ms ease;
+}
+
+#animation3.fade-in {
   opacity: 1;
 }
 
@@ -54,21 +96,10 @@ body {
   text-shadow: 0 0 5px grey;
 }
 
-/*.section buttons {
+.section buttons {
   background-color: red;
   transition: all 2000ms ease;
 }
-
-#one{
-  opacity: 0;
-  transition: opacity 2000ms ease;
-}
-
-#one.fade-in{
-  opacity: 1;
-}
-*/
-
 
 
 #circle{
@@ -169,11 +200,12 @@ body {
 
 #modalText h6{
   letter-spacing: 5px;
-  color: #CFD8DC;
+  color: grey;
+  opacity: 0.6;
 }
 
 .close {
-  background: #606061;
+  background: #87888A;
   color: #FFFFFF;
   line-height: 25px;
   position: absolute;
@@ -183,14 +215,14 @@ body {
   width: 24px;
   text-decoration: none;
 
-  font-weight: bold;
+  font-weight: regular;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
 
-  -moz-box-shadow: 1px 1px 3px #000;
-  -webkit-box-shadow: 1px 1px 3px #000;
-  box-shadow: 1px 1px 3px #000;
+  -moz-box-shadow: 0px 0px 8px #000;
+  -webkit-box-shadow: 0px 0px 8px #000;
+  box-shadow: 0px 0px 8px #000;
 }
 
 .close:hover { background: #CCFFFF; }

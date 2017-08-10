@@ -13,7 +13,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT : verificar el link desde Google Fonts
+  <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
@@ -22,18 +22,14 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
-  <link rel="stylesheet" href="css/loading.css">
 
-
-<!-- Scripts P5.JS
+  <!-- Scripts P5.JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="libs/p5.dom.min.js"></script>
   <script src="libs/p5.min.js"></script>
   <script src="libs/p5.sound.min.js"></script>
-
-  <script src="js/sketch2.js"></script>
-  <script src="js/vehicle.js"></script>
-
+  <script src="libs/p5.play.js"></script>
+  <script src="js/sketch3.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -42,74 +38,26 @@
 </head>
 <body>
 
- <!-- Loader
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <div id="intro" class="loader">
-    <div class="inner one"></div>
-    <div class="inner two"></div>
-    <div class="inner three"></div>
-  </div>
-
-
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
-    </div>
-  </div> -->
 
+  <div class="home-button">
+  <a class="button" id="circlehome" href="index.html">
+    <audio id="mySoundClip">
+      <source src="soundbible/sonar.mp3"></source>
+    </audio>
+  </a>
+  <h6>HOME</h6>
+  </div>
 
-  <div id="animation2"></div>
-
-  <div id='block1' class="section buttons">
+  <div class="section buttons">
     <div class="container">
       <div class="row">
-
-        <div class="one-third column value test one" >
-          <a class="button" id="square" href="p5play.html"></a>
-
-
-        </div>
-
-        <div class="one-third column value test two">
-          <a class="button" id="circle" href="p5.html">
-          <audio id="mySoundClip">
-            <source src="soundbible/sonar.mp3"></source>
-          </audio>
-          </a>
-        </div>
-
-        <div class="one-third column value test three">
-          <a class="button" id="square" href="game.html"></a>
-        </div>
-
+        <div id="animation3"></div>
       </div>
     </div>
   </div>
 
-  <div id="block2" class="footer">
-    <div class="container">
-      <div class="row">
-        <h6 class="citation">ΑΓΕΩΜΕΤΡΗΤΟΣ ΜΗΔΕΙΣ ΕΙΣΙΤΩ</h6>
-
-        <a class="website" href="#openModal">more info</p>
-          <div id="openModal" class="modalDialog">
-            <div id="modalText">
-              <a href="#close" title="Close" class="close">X</a>
-              <h6 class="italic">"Let no one ignorant of geometry enter"</h6>
-              <a class="website" href="http://plato-dialogues.org/faq/faq009.htm">link</p>
-            </div>
-          </div>
-
-        <a class="website" href="http://www.andreabravo.com">© 2017</a>
-      </div>
-    </div>
-  </div>
 
 <!-- Scripts JS JQUERY
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
