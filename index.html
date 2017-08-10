@@ -13,15 +13,25 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
+  <!-- FONT : verificar el link desde Google Fonts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+
+
+<!-- Scripts P5.JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="libs/p5.dom.min.js"></script>
+  <script src="libs/p5.min.js"></script>
+  <script src="libs/p5.sound.min.js"></script>
+
+  <script src="js/sketch2.js"></script>
+  <script src="js/vehicle.js"></script>
 
 
   <!-- Favicon
@@ -42,24 +52,25 @@
     </div>
   </div> -->
 
+  <div id="animation2"></div>
+
   <div class="section buttons">
     <div class="container">
       <div class="row">
 
-        <div class="one-third column value test" >
+        <div class="one-third column value test one" >
           <a class="button" id="square" href="#openModal"></a>
           <div id="openModal" class="modalDialog">
             <div id="modalText">
               <a href="#close" title="Close" class="close">X</a>
               <h6>ΑΓΕΩΜΕΤΡΗΤΟΣ ΜΗΔΕΙΣ ΕΙΣΙΤΩ</h6>
-              <!-- <p>"Let no one ignorant of geometry enter"</p> -->
               <a class="website" href="http://plato-dialogues.org/faq/faq009.htm">more info</p>
             </div>
           </div>
 
         </div>
 
-        <div class="one-third column value test">
+        <div class="one-third column value test two">
           <a class="button" id="circle" href="p5.html">
           <audio id="mySoundClip">
             <source src="soundbible/sonar.mp3"></source>
@@ -67,7 +78,7 @@
           </a>
         </div>
 
-        <div class="one-third column value test">
+        <div class="one-third column value test three">
           <a class="button" id="square" href="game.html"></a>
         </div>
 

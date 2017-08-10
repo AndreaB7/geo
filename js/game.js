@@ -1,59 +1,115 @@
 
-// SETUP GAME: limpio
+// SETUP GAME
 function Game() {
-  this.board = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null]
-  ];
 
-  this.isFull = false;
-  this.generateGrid(3, 3);
-
+  // El valor dentro de generateGrid corresponde al número de rows
+  // el valor equivale a numberRow
+  var tetractys = this.generateGrid(4);
 }
 
-// Prototypes to inputs to the game
-// HTML
-Game.prototype.generateGrid = function(numberRow, numberColumn){
+//Prototypes to inputs to the game
+//HTML
+
+Game.prototype.generateGrid = function(numberRow){
     console.log("I am in a grid");
+
+    // generas dos for para obtener una matrix
+    // 1 columna para que haya un div separado por cell
+    var totalColumns = 1;
+    var out = '';
+
     for (row = 0; row < numberRow; row++) {
-      for (column = 0; column < numberColumn; column++){
-        $('#game').append($('<div>')
-                  .attr('data-row', row)
-                  .attr('data-col', column)
-                  .addClass('cell'));
-        console.log("This is a cell");
+      out += `<div class="row">`;
+      for (column = 0; column < totalColumns; column++) {
+        // inicializar el game e incluir divs en los rows y columns
+
+        // template string: te permite de usar multi-line string
+        // the $ is used to specify placeholders
+        out += `<div data-row="${row}" data-col="${column}" class="cell"><span class='triangle-content'></span></div>`;
       }
+      out += "</div>";
+      // vamos sumando cada vez que se crea un nuevo row una cell más . Si quiero añadir cada vez que haya un nuevo row, 5 cells, lo único que tengo que hacer es poner totalColumns+5
+      totalColumns++;
     }
+    $('#game').append(out);
       this.clickCell();
 };
+
+
+var counter = 0;
 
 Game.prototype.clickCell = function(){
   console.log("This is a click");
 
+
   var row;
   var col;
-
-  // turno para definir los jugadores
   var turn = 1;
-  // definimos una variable parar
   var value;
 
   $(".cell").click(function(){
-    //if user 1 + declarar user 1 y user 2
-    // HTML
 
+    // el contador nos permite contar hasta 10 clicks
+    // los if encadenados están por orden, quiere decir que se pueden ejecutar varios if.
+
+    // si el contador llega a 10, remove the classes and generate a new triangle (poner los valores a 0)
+    if (counter === 10) {
+      $('.cell').children().text('');
+      $('.cell').removeClass('ten-selected');
+      counter = 0;
+      return;
+    }
+
+    // si se clica en una cell y hay contenido ( < 1), súmale una al contador
+    if($(this).children().text().length < 1) {
+      counter++
+    }
+
+    // si el contador llega a 10 añade las clase : seleccionado
+    if (counter === 10) {
+      $('.cell').addClass('ten-selected');
+    }
+
+    // Τετρακτινο
     if (turn === 1){
-      value = "d";
-      $(this).text("d")
+      value = "τ";
+      $(this).children().text("τ")
       turn = 2;
     } else if (turn === 2){
-      $(this).text("i");
-      value = "i";
+      $(this).children().text("ε");
+      value = "ε";
       turn = 3;
     } else if (turn === 3){
-      $(this).text("v");
-      value = "v";
+      $(this).children().text("τ");
+      value = "τ";
+      turn = 4;
+    } else if (turn === 4){
+       $(this).children().text("ρ");
+      value = "ρ";
+      turn = 5;
+    } else if (turn === 5){
+      $(this).children().text("α");
+      value = "α";
+      turn = 6;
+    } else if (turn === 6){
+      $(this).children().text("κ");
+      value = "κ";
+      turn = 7;
+    } else if (turn === 7){
+      $(this).children().text("τ");
+      value = "τ";
+      turn = 8;
+    } else if (turn === 8){
+      $(this).children().text("ι");
+      value = "ι";
+      turn = 9;
+    } else if (turn === 9){
+      $(this).children().text("ν");
+      value = "ν";
+      turn = 10;
+    } else if (turn === 10){
+      $(this).children().text("o");
+      value = "o";
       turn = 1;
     }
 
@@ -63,25 +119,9 @@ Game.prototype.clickCell = function(){
         console.log(row);
       col = $(this).attr('data-col')
         console.log(col);
-
-    game.board[row][col] = value;
-      console.log (game.board);
-      game.detectFullBoard();
-      game.extractRandomTiles();
-      console.log("isFull ?" , game.isFull)
   });
 }
 
-Game.prototype.detectFullBoard = function(){
-  this.isFull = true;
-  for(var i = 0; i <= this.board.length; i++){
-    for (var j = 0; j<= this.board[i].length; j++) {
-      if(this.board[i][j] === null){
-        this.isFull = false
-      }
-    }
-  }
-}
 
 
 // INICIALIZACIÓN DEL GAME
@@ -90,10 +130,9 @@ Game.prototype.detectFullBoard = function(){
 var game;
 
 $(document).ready(function() {
-  $("#game").addClass("fadeIn");
+  $(".title").addClass("fade-in");
 
-  setTimeout(function(){
-    $("#game").show()
-    game = new Game();
-  }, 150)
+  $("#game").addClass("fade-in");
+  game = new Game();
+
 });

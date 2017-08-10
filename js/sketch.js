@@ -41,7 +41,8 @@ function draw() {
     translate(0,l0);
 
     // ellipse inicial: central
-    stroke(255, 153, 204, 300);
+    // stroke(255, 153, 204); --> pink color
+    stroke(255,99,71);
     ellipse(0, 0, 50, 3);
 
     rotate(angle);
@@ -51,8 +52,11 @@ function draw() {
         push();
         rotate(j*TWO_PI/5);
         translate(0, l1);
-        stroke(255, 153, 204, 300);
+
+        stroke(255,99,71);
+        // stroke(255, 153, 204); --> pink color
         ellipse(0, 0, 80, 5);
+        fill(215, 255, 255,8);
         rotate(angle);
 
         // circulos exteriores
@@ -60,8 +64,9 @@ function draw() {
           push();
           rotate(k*TWO_PI/5);
           translate(0, 33);
-          stroke(215, 255, 255, 250);
+          stroke(215, 255, 255);
           ellipse(0, 0, 70, 33);
+
           rotate(angle);
 
           pop();
@@ -73,4 +78,6 @@ function draw() {
 
   angle -= speed;
 }
+
+
 
